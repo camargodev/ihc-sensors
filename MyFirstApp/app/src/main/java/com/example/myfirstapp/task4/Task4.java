@@ -1,5 +1,10 @@
 package com.example.myfirstapp.task4;
 
+import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -10,30 +15,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myfirstapp.R;
 
-public class Task4 extends AppCompatActivity {
+public class Task4 extends AppCompatActivity implements SensorEventListener {
 
-    private TextView result;
-    private EditText operand1;
-    private EditText operand2;
+    private TextView brightnessView;
+    private SensorManager sensorManager;
+    private Sensor brightness;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_4);
 
-        result = (TextView) findViewById(R.id.result);
-        operand1 = (EditText) findViewById(R.id.operand1);
-        operand2 = (EditText) findViewById(R.id.operand2);
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        brightness = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        sensorManager.registerListener(this, brightness, SensorManager.SENSOR_DELAY_NORMAL);
+
+        brightnessView = (TextView) findViewById(R.id.brightness);
     }
 
-    public void sumValues(View view) {
-        try {
-            Integer op1 = Integer.parseInt(operand1.getText().toString());
-            Integer op2 = Integer.parseInt(operand2.getText().toString());
-            Integer res = op1 + op2;
-            result.setText(res.toString());
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid number", Toast.LENGTH_SHORT).show();
-        }
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        float brightnessValue = event.values[0];
+        brightnessView.setText("Room rightness is " + brightnessValue);
     }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) { }
 }
