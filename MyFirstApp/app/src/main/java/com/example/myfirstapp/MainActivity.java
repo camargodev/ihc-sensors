@@ -19,13 +19,28 @@ public class MainActivity extends AppCompatActivity {
         startActivity(nextTask);
     }
 
-    public void task2(View view) { }
+    public void task2(View view) {
+        Intent nextTask = new Intent(this, Task2.class);
+        finish();
+        startActivity(nextTask);}
 
-    public void task3(View view) { }
+    public void task3(View view) {
+        Intent nextTask = new Intent(this, Task3.class);
+        finish();
+        startActivity(nextTask);}
 
-    public void task4(View view) { }
+    public void task4(View view) {
+        Intent nextTask = new Intent(this, Task4.class);
+        finish();
+        startActivity(nextTask);}
 
-    public void task5(View view) { }
+    public void task5(View view) {
+        Intent nextTask = new Intent(this, Task5.class);
+        finish();
+        startActivity(nextTask);}
 
-    public void task6(View view) { }
+    public void task6(View view) {
+        Intent nextTask = new Intent(this, Task6.class);
+        finish();
+        startActivity(nextTask);}
 }
