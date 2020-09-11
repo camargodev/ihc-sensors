@@ -6,62 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/operand1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="48dp"
+    <Button
+        android:id="@+id/task6"
+        android:layout_width="323dp"
+        android:layout_height="55dp"
+        android:onClick="task6"
+        android:text="Task 6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"  />
-
-    <EditText
-        android:id="@+id/operand2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="107dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"  />
+        app:layout_constraintVertical_bias="0.7" />
 
     <Button
-        android:id="@+id/sum"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sum Values"
-        android:onClick="sumValues"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="180dp"
-        tools:visibility="visible"
+        android:id="@+id/task3"
+        android:layout_width="323dp"
+        android:layout_height="55dp"
+        android:onClick="task3"
+        android:text="Task 3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"  />
+        app:layout_constraintVertical_bias="0.4" />
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Result"
-        tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="277dp"
+    <Button
+        android:id="@+id/task4"
+        android:layout_width="323dp"
+        android:layout_height="55dp"
+        android:onClick="task4"
+        android:text="Task 4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"  />
+        app:layout_constraintVertical_bias="0.5" />
 
+    <Button
+        android:id="@+id/task5"
+        android:layout_width="323dp"
+        android:layout_height="55dp"
+        android:onClick="task5"
+        android:text="Task 5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <Button
+        android:id="@+id/task2"
+        android:layout_width="323dp"
+        android:layout_height="55dp"
+        android:onClick="task2"
+        android:text="Task 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/task1"
+        android:layout_width="325dp"
+        android:layout_height="55dp"
+        android:onClick="task1"
+        android:text="Task 1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
