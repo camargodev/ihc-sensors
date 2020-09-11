@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".task1.Task1"/>
         <activity android:name=".task2.Task2"/>
+        <activity android:name=".task2.Task2Display"/>
         <activity android:name=".task3.Task3"/>
         <activity android:name=".task4.Task4"/>
         <activity android:name=".task5.Task5"/>

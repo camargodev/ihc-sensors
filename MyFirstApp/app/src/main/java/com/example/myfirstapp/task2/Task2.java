@@ -1,5 +1,6 @@
 package com.example.myfirstapp.task2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -13,7 +14,7 @@ import com.example.myfirstapp.R;
 public class Task2 extends AppCompatActivity {
 
     private TextView result;
-    private EditText operand1;
+    private EditText text;
     private EditText operand2;
 
     @Override
@@ -21,19 +22,17 @@ public class Task2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_2);
 
-        result = (TextView) findViewById(R.id.result);
-        operand1 = (EditText) findViewById(R.id.operand1);
-        operand2 = (EditText) findViewById(R.id.operand2);
+        text = (EditText) findViewById(R.id.text);
     }
 
-    public void sumValues(View view) {
-        try {
-            Integer op1 = Integer.parseInt(operand1.getText().toString());
-            Integer op2 = Integer.parseInt(operand2.getText().toString());
-            Integer res = op1 + op2;
-            result.setText(res.toString());
-        } catch (NumberFormatException e) {
-            Toast.makeText(this, "Invalid number", Toast.LENGTH_SHORT).show();
-        }
+    public void next(View view) {
+
+        String strText = text.getText().toString();
+
+        Intent nextScreen = new Intent(this, Task2Display.class);
+        nextScreen.putExtra("text", strText);
+
+        finish();
+        startActivity(nextScreen);
     }
 }
