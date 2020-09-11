@@ -17,11 +17,12 @@ import com.example.myfirstapp.R;
 
 public class Task5 extends AppCompatActivity implements SensorEventListener {
 
+    private static final int X = 0, Y = 1, Z = 2;
     private TextView brightnessView;
-    private TextView proximityView;
+    private TextView gyroscopeView;
     private SensorManager sensorManager;
     private Sensor brightness;
-    private Sensor proximity;
+    private Sensor gyroscope;
 
 
     @Override
@@ -31,12 +32,12 @@ public class Task5 extends AppCompatActivity implements SensorEventListener {
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         brightness = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-        proximity = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         sensorManager.registerListener(this, brightness, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, proximity, SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(this, gyroscope, SensorManager.SENSOR_DELAY_NORMAL);
 
         brightnessView = (TextView) findViewById(R.id.brightness);
-        proximityView = (TextView) findViewById(R.id.proximity);
+        gyroscopeView = (TextView) findViewById(R.id.gyroscope);
     }
 
     @Override
@@ -47,9 +48,14 @@ public class Task5 extends AppCompatActivity implements SensorEventListener {
                 float brightnessValue = event.values[0];
                 brightnessView.setText("Room rightness is " + brightnessValue);
                 break;
-            case Sensor.TYPE_PROXIMITY:
-                float proximityValue = event.values[0];
-                proximityView.setText("Proximity to phone is " + proximityValue);
+            case Sensor.TYPE_GYROSCOPE:
+                float gyroscopeX = event.values[X];
+                float gyroscopeY = event.values[Y];
+                float gyroscopeZ = event.values[Z];
+                String display = "X rotation = " + gyroscopeX;
+                display += "\nY rotation = " + gyroscopeY;
+                display += "\nZ rotation = " + gyroscopeZ;
+                gyroscopeView.setText(display);
                 break;
         }
     }
