@@ -16,12 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Task1"/>
-        <activity android:name=".Task2"/>
-        <activity android:name=".Task3"/>
-        <activity android:name=".Task4"/>
-        <activity android:name=".Task5"/>
-        <activity android:name=".Task6"/>
+        <activity android:name=".task1.Task1"/>
+        <activity android:name=".task2.Task2"/>
+        <activity android:name=".task3.Task3"/>
+        <activity android:name=".task4.Task4"/>
+        <activity android:name=".task5.Task5"/>
+        <activity android:name=".task6.Task6"/>
     </application>
 
 </manifest>

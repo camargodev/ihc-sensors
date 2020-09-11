@@ -1,4 +1,4 @@
-package com.example.myfirstapp;
+package com.example.myfirstapp.task2;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +8,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Task1 extends AppCompatActivity {
+import com.example.myfirstapp.R;
+
+public class Task2 extends AppCompatActivity {
 
     private TextView result;
     private EditText operand1;
@@ -17,7 +19,7 @@ public class Task1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_task_1);
+        setContentView(R.layout.activity_task_2);
 
         result = (TextView) findViewById(R.id.result);
         operand1 = (EditText) findViewById(R.id.operand1);

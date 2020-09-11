@@ -5,6 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.myfirstapp.task1.Task1;
+import com.example.myfirstapp.task2.Task2;
+import com.example.myfirstapp.task3.Task3;
+import com.example.myfirstapp.task4.Task4;
+import com.example.myfirstapp.task5.Task5;
+import com.example.myfirstapp.task6.Task6;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

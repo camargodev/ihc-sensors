@@ -1,4 +1,4 @@
-package com.example.myfirstapp;
+package com.example.myfirstapp.task3;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +7,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myfirstapp.R;
 
 public class Task3 extends AppCompatActivity {
 
